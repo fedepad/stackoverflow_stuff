@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 2.8)
+
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE}" )
+if( CMAKE_CXX_FLAGS_RELEASE MATCHES "-DFOO")
+	message("matching -DFOO")
+	message("${CMAKE_CXX_FLAGS_RELEASE}")
+else( CMAKE_CXX_FLAGS_RELEASE MATCHES "-DFOO")
+	message("no -DFOO!!!")
+	message("${CMAKE_CXX_FLAGS_RELEASE}")
+endif()
